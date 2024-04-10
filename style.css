@@ -1,0 +1,176 @@
+*, html, body {
+    margin : 0;
+}
+
+body {
+    background-color: black;
+    color: white;
+    width: 100vw;
+    height: 100vh;
+    margin: 0 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+.container{
+    width: 80%;
+    margin: auto 50px;
+    display: flex;
+    justify-content : space-between; 
+}
+
+.left{
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.left .description{
+    margin: auto 30px;
+}
+
+.left .description img{
+    width: 200px;
+    margin-bottom: 50px;
+}
+
+.left .description h1 {
+    font-style: italic;
+    margin-bottom: 30px;
+}
+
+
+.boxContainer{
+    margin : 30px 0;
+    width: 100%;
+    height: 150px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.item{
+    width: 32%;
+    height: 100%;
+    background-color: white;
+    color: black;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    font-style: italic;
+    font-weight: bold;
+}
+
+
+.right{
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.loginForm{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    width: 60%;
+}
+
+.right h2{
+    font-style: italic;
+    margin-bottom: 20px;
+}
+
+
+#loginButton{
+    margin: 10px;
+    padding: 10px;
+    width: 45%;
+    border-radius: 50px;
+    background-color: orange;
+    color: white;
+    font-weight: bold;
+    transition: all 0.3s;
+}
+
+#loginButton:hover{
+    transform: scale(1.05, 1.05);
+}
+
+.inputBox{
+    width: 80%;
+    height: 30px;
+    padding: 10px 15px;
+    border-radius: 50px;
+    margin: 5px;
+    display: flex;
+    justify-content: left;
+    align-items: center;
+    background-color: white;
+}
+
+.inputBox>input{
+    border: 0 solid white;
+    height: 90%;
+    width: 90%;
+    margin-left: 5px;
+    font-style: italic;
+}
+
+.inputBox>input:focus{
+    outline: none;
+}
+
+
+@media screen and (max-width : 850px) {
+
+    .container{
+        flex-direction : column;
+        align-items: center;
+        margin-top : 50px;
+    }
+
+    .left .description{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .left .description p {
+        text-align: center;
+    }
+
+    .left .boxContainer {
+        width: 100%;
+        height: auto;
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .left .boxContainer .item{
+        height: 100px;
+        width: 100%;
+        margin : 0 0;
+        min-height: 100px;
+    }
+
+    .right .loginForm {
+        width: 100%;
+    }
+
+    .right .loginForm .inputBox {
+        width: 100%;
+    }
+
+    .right .loginForm #loginButton{
+        width: 60%;
+    }
+    
+}
